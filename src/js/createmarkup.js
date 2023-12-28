@@ -19,20 +19,20 @@ export function renderingMarkup(items) {
     <img class="photo-card__img" src="${webformatURL}" alt="${tags}" loading="lazy"/>
     <div class="info">
       <p class="info-item">
-        <b>Likes</b>
-        <span>${likes}</span>
+        <b class="info-bold">Likes</b>
+        <span class="info-span">${likes}</span>
       </p>
       <p class="info-item">
-        <b>Views</b>
-        <span>${views}</span>
+        <b class="info-bold">Views</b>
+        <span class="info-span">${views}</span>
       </p>
       <p class="info-item">
-        <b>Comments</b>
-        <span>${comments}</span>
+        <b class="info-bold">Comments</b>
+        <span class="info-span">${comments}</span>
       </p>
       <p class="info-item">
-        <b>Downloads</b>
-        <span>${downloads}</span>
+        <b class="info-bold">Downloads</b>
+        <span class="info-span">${downloads}</span>
       </p>
     </div>
     </a>

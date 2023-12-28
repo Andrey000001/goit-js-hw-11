@@ -15,19 +15,20 @@ p {
   margin: 0;
   padding: 0;
 }
-b {
-  @media screen and(min-width: 1200px) {
-    font-size: 13px;
+
+.info-bold {
+  color: black;
+  @media screen and(min-width: 480px) {
+    font-size: 12px;
   }
   @media screen and(min-width: 768px) {
     font-size: 11px;
   }
-  @media screen and(min-width: 480px) {
-    font-size: 12px;
+  @media screen and(min-width: 1200px) {
+    font-size: 13px;
   }
-  color: black;
 }
-span {
+.info-span {
   font-size: 14px;
   color: black;
   @media screen and(min-width: 480px) {
@@ -39,14 +40,15 @@ span {
   margin-left: auto;
   margin-right: auto;
   padding: 0 15px;
-  @media screen and(min-width: 1200px) {
-    width: 1200px;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
   }
   @media screen and (min-width: 768px) {
     width: 768px;
   }
-  @media screen and (min-width: 480px) {
-    width: 480px;
+  @media screen and(min-width: 1200px) {
+    width: 1200px;
   }
 }
 
@@ -55,91 +57,97 @@ span {
   z-index: 1;
   left: 0;
   top: 0;
+
   display: flex;
   width: 100%;
-  background: beige;
   justify-content: center;
   border-bottom: 2px solid #d1b0ab;
-
   box-shadow: 3px 3px 3px 0px rgba(184, 178, 178, 0.7);
-  @media screen and(min-width: 1200px) {
-    padding: 20px;
+  background: beige;
+
+  @media screen and(min-width: 480px) {
+    padding: 15px;
   }
   @media screen and(min-width: 768px) {
     padding: 20px;
   }
-  @media screen and(min-width: 480px) {
-    padding: 15px;
+  @media screen and(min-width: 1200px) {
+    padding: 20px;
   }
 }
 .search-form_submit {
-  background: darkgoldenrod;
   margin-left: 10px;
+
   border-radius: 4px;
+  background: darkgoldenrod;
+
   cursor: pointer;
 }
 .search-form_submit:hover {
   transform: scale(1.1);
 }
+
 .input {
-  @media screen and(min-width: 1200px) {
-    width: 350px;
-    border: 2px solid;
-    border-radius: 5px;
-    height: 35px;
-    padding-left: 30px;
+  @media screen and(min-width:480px) {
+    width: 200px;
+    height: 25px;
+    padding-left: 15px;
+
+    border-radius: 3px;
+    border: 1px solid;
   }
   @media screen and(min-width:768px) {
     width: 300px;
-    border-radius: 3px;
-    border: 2px solid;
     height: 30px;
     padding-left: 20px;
-  }
-  @media screen and(min-width:480px) {
-    width: 200px;
+
     border-radius: 3px;
-    border: 1px solid;
-    height: 25px;
-    padding-left: 15px;
+    border: 2px solid;
+  }
+  @media screen and(min-width: 1200px) {
+    width: 350px;
+    height: 35px;
+    padding-left: 30px;
+
+    border: 2px solid;
+    border-radius: 5px;
   }
 }
 .gallery {
-  @media screen and(min-width: 1200px) {
-    padding-top: 77px;
-    margin-top: 5px;
-    margin: -30px -30px 0px 0px;
-  }
-  @media screen and(min-width: 768px) {
-    padding-top: 72px;
-    margin-top: 1px;
-    margin: -30px -30px 0px 0px;
-  }
+  display: flex;
+  flex-wrap: wrap;
   @media screen and(min-width: 480px) {
     padding-top: 57px;
     margin-top: 18px;
   }
-
-  display: flex;
-  flex-wrap: wrap;
+  @media screen and(min-width: 768px) {
+    padding-top: 85px;
+    margin: -30px -30px 0px 0px;
+  }
+  @media screen and(min-width: 1200px) {
+    padding-top: 95px;
+    margin: -30px -30px 0px 0px;
+  }
 }
 .photo-card {
   border-radius: 2px;
   box-shadow: 3px 3px 3px 0px rgba(184, 178, 178, 0.7);
   -webkit-box-shadow: 3px 3px 3px 0px rgba(184, 178, 178, 0.7);
   -moz-box-shadow: 3px 3px 3px 0px rgba(184, 178, 178, 0.7);
-  @media screen and (min-width: 1200px) {
-    margin: 30px 30px 0px 0px;
-    width: calc((100% - 120px) / 4);
-  }
+
   @media screen and(min-width: 768px) {
     margin: 30px 30px 0px 0px;
     width: calc((100% - 90px) / 3);
   }
+
+  @media screen and (min-width: 1200px) {
+    margin: 30px 30px 0px 0px;
+    width: calc((100% - 120px) / 4);
+  }
 }
 
 .photo-card:not(:last-child) {
-  @media screen and(min-width: 480px) {
+  @media screen and(max-width: 768px) {
     margin-bottom: 10px;
   }
 }
@@ -147,56 +155,55 @@ span {
 .photo-card:hover {
   transform: scale(1.1);
 }
-
 img {
-  border-radius: 3px;
-  width: 100%;
   display: block;
+  width: 100%;
   object-fit: cover;
-  @media screen and (min-width: 1200px) {
-    height: 230px;
-  }
+  border-radius: 3px;
+
   @media screen and (min-width: 768px) {
     height: 170px;
   }
-  
+  @media screen and (min-width: 1200px) {
+    height: 230px;
+  }
 }
 .info {
   display: flex;
-  @media screen and(min-width: 1200px) {
-    margin: 15px;
-  }
-  @media screen and(min-width: 768px) {
-    margin: 8px;
-  }
   @media screen and (min-width: 480px) {
     justify-content: center;
     margin: 12px;
   }
+  @media screen and(min-width: 768px) {
+    margin: 8px;
+  }
+  @media screen and(min-width: 1200px) {
+    margin: 15px;
+  }
 }
 .loadMoreBtn {
-  background-color: darkgoldenrod;
-
   border-radius: 3px;
   border: 2px solid black;
+  background-color: darkgoldenrod;
   cursor: pointer;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  @media screen and (min-width: 1200px) {
-    margin-top: 25px;
+  @media screen and (min-width: 480px) {
+    margin-top: 15px;
     margin-bottom: 10px;
-    padding: 10px 35px;
+    padding: 6px 25px;
   }
   @media screen and (min-width: 768px) {
     margin-top: 15px;
     margin-bottom: 7px;
     padding: 6px 25px;
   }
-  @media screen and (min-width: 480px) {
-    margin-top: 15px;
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 25px;
     margin-bottom: 10px;
-    padding: 6px 25px;
+    padding: 10px 35px;
   }
 }
 .loadMoreBtn:hover {
