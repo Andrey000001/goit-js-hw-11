@@ -1,19 +1,20 @@
 import simpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css'
-
-import { refs } from "./refs"
+import 'simplelightbox/dist/simple-lightbox.min.css';
+import { refs } from './refs';
+const lightbox = new simpleLightbox('.gallery a');
 
 export function renderingMarkup(items) {
-  const markup = items.map(
-    ({
-      downloads,
-      largeImageURL,
-      likes,
-      tags,
-      views,
-      comments,
-      webformatURL,
-    }) => `
+  const markup = items
+    .map(
+      ({
+        downloads,
+        largeImageURL,
+        likes,
+        tags,
+        views,
+        comments,
+        webformatURL,
+      }) => `
     <div class="photo-card">
     <a href="${largeImageURL}">
     <img class="photo-card__img" src="${webformatURL}" alt="${tags}" loading="lazy"/>
@@ -34,11 +35,14 @@ export function renderingMarkup(items) {
         <b class="info-bold">Downloads</b>
         <span class="info-span">${downloads}</span>
       </p>
+      </a>
     </div>
-    </a>
+    
   </div>
     `
-  ).join('')
-  refs.gallery.insertAdjacentHTML('beforeend',markup)
-  new simpleLightbox('.gallery a')
+    )
+    .join('');
+  refs.gallery.insertAdjacentHTML('beforeend', markup);
+
+  lightbox.refresh();
 }
